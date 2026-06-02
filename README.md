@@ -1,91 +1,263 @@
-# Recharts
+<div align="center">
 
-[![storybook](https://raw.githubusercontent.com/storybooks/brand/master/badge/badge-storybook.svg)](https://recharts.github.io/en-US/storybook)
-[![Build Status](https://github.com/recharts/recharts/workflows/Node.js%20CI/badge.svg)](https://github.com/recharts/recharts/actions)
-[![codecov](https://codecov.io/gh/recharts/recharts/graph/badge.svg?token=Bn6L2hrl8T)](https://codecov.io/gh/recharts/recharts)
-[![npm version](https://badge.fury.io/js/recharts.svg)](http://badge.fury.io/js/recharts)
-[![npm downloads](https://img.shields.io/npm/dm/recharts.svg?style=flat-square)](https://www.npmjs.com/package/recharts)
-[![MIT License](https://img.shields.io/badge/license-MIT-blue.svg?style=flat)](/LICENSE)
+# ⚡ Gamified Study Timer ⚡
 
-## Introduction
+<img src="https://readme-typing-svg.demolab.com?font=Poppins&weight=700&size=28&pause=1000&color=F6D32D&center=true&vCenter=true&width=800&lines=Study+Hard+%F0%9F%93%9A;Earn+XP+%E2%9A%A1;Level+Up+Your+Focus+%F0%9F%8E%AE;Unlock+New+Themes+%F0%9F%8C%9F;Become+The+Ultimate+Study+Master+%F0%9F%8F%86"/>
 
-Recharts is a **Redefined** chart library built with [React](https://facebook.github.io/react/) and [D3](http://d3js.org).
+<br>
 
-The main purpose of this library is to help you to write charts in React applications without any pain. Main principles of Recharts are:
+<img src="https://img.shields.io/badge/Status-Under%20Development-FFD93D?style=for-the-badge&logo=github&logoColor=black"/>
+<img src="https://img.shields.io/badge/Built%20With-React-61DAFB?style=for-the-badge&logo=react&logoColor=black"/>
+<img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black"/>
+<img src="https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white"/>
 
-1. **Simply** deploy with React components.
-2. **Native** SVG support, lightweight with minimal dependencies.
-3. **Declarative** components.
+<br><br>
 
-Documentation at [recharts.github.io](https://recharts.github.io) and our [storybook](https://recharts.github.io/en-US/storybook)
+### 🌟 Turn Every Study Session Into An Adventure 🌟
 
-Also see [the wiki](https://github.com/recharts/recharts/wiki).
+*"Focus. Earn XP. Level Up. Repeat."*
 
-All development is done on the `main` branch. The current latest release and storybook documentation reflects what is on the `release` branch.
+</div>
 
-## Examples
+---
 
-```jsx
-<LineChart width={400} height={400} data={data}>
-  <XAxis dataKey="name" />
-  <Tooltip />
-  <CartesianGrid stroke="#f5f5f5" />
-  <Line type="monotone" dataKey="uv" stroke="#ff7300" />
-  <Line type="monotone" dataKey="pv" stroke="#387908" />
-</LineChart>
+## 🌈 About The Project
+
+⚡ **Gamified Study Timer** is a productivity application designed to make studying fun, interactive, and rewarding.
+
+Instead of simply counting minutes, users can:
+
+✨ Earn XP by completing focus sessions  
+🎮 Progress through levels  
+🏆 Unlock achievements  
+🔥 Maintain study streaks  
+🎨 Switch between exciting themes  
+📈 Track study progress visually
+
+The goal is simple:
+
+> **Transform productivity into a game.**
+
+---
+
+## ⚠️ Development Status
+
+```diff
++ This project is actively being developed.
++ New features are being added regularly.
++ UI improvements and theme updates are in progress.
+
+! Current version is NOT the final release.
+! More themes, achievements and features are coming soon.
 ```
 
-All the components of Recharts are clearly separated. The LineChart is composed of x axis, tooltip, grid, and line items, and each of them is an independent React Component. The clear separation and composition of components is one of the principle Recharts follows.
+---
 
-## Installation
+# ⚡ Current Features
 
-### npm
+<table>
+<tr>
 
-NPM is the easiest and fastest way to get started using Recharts. It is also the recommended installation method when building single-page applications (SPAs). It pairs nicely with a CommonJS module bundler such as Webpack.
+<td width="50%">
 
-```sh
-# latest stable
-$ npm install recharts react-is
+### ⏳ Study Timer
+
+- Focus Sessions
+- Productivity Tracking
+- Session Completion Rewards
+- Timer Progress Display
+
+</td>
+
+<td width="50%">
+
+### 🎮 Gamification
+
+- XP System
+- Level Progression
+- Achievement Rewards
+- Streak Tracking
+
+</td>
+
+</tr>
+</table>
+
+---
+
+# 🎨 Theme Collection
+
+### 🐧 Piplup Theme
+A cool blue theme for the beginning of your journey.
+
+### ⭐ Shinchan Theme
+Bright, playful and energetic.
+
+### 🤖 Doraemon Theme
+Futuristic focus vibes.
+
+### 🐱 Oggy Theme
+For dedicated students who keep leveling up.
+
+---
+
+# 📊 Progress System
+
+```text
+Level      ▰▰▰▰▰▰▰▱▱▱ 70%
+
+XP         2450 / 3500 ⚡
+
+Streak     🔥 12 Days
+
+Focus      📚 154 Hours
 ```
 
-`react-is` needs to match the version of your installed `react` package.
+---
 
-### umd
+# 🎮 Study Journey
 
-The UMD build is also available on unpkg.com:
+```mermaid
+flowchart LR
 
-```html
-<script src="https://unpkg.com/react/umd/react.production.min.js"></script>
-<script src="https://unpkg.com/react-dom/umd/react-dom.production.min.js"></script>
-<script src="https://unpkg.com/react-is/umd/react-is.production.min.js"></script>
-<script src="https://unpkg.com/recharts/umd/Recharts.min.js"></script>
+A[📚 Start Studying]
+--> B[⏳ Complete Session]
+
+B --> C[⚡ Earn XP]
+
+C --> D[🚀 Level Up]
+
+D --> E[🎨 Unlock Theme]
+
+E --> F[🏆 Earn Achievement]
+
+F --> G[🔥 Build Streak]
 ```
 
-Then you can find the library on `window.Recharts`.
+---
 
-## Contributing
+# 📸 Preview
 
-Recharts is open source. If you want to contribute to the project, please read the [CONTRIBUTING.md](/CONTRIBUTING.md)
-to understand how to contribute to the project and [DEVELOPING.md](/DEVELOPING.md) to set up your development
-environment.
+<div align="center">
 
-## Thanks
+## 🚧 Screenshots & GIFs Coming Soon 🚧
 
-<a href="https://www.chromatic.com/"><img src="https://user-images.githubusercontent.com/321738/84662277-e3db4f80-af1b-11ea-88f5-91d67a5e59f6.png" width="153" height="30" alt="Chromatic" /></a>
+### Future Showcase
 
-Thanks to [Chromatic](https://www.chromatic.com/) for providing the visual testing platform that helps us review UI changes and catch visual regressions.
+📱 Live Study Sessions  
+⚡ XP Progression  
+🎮 Theme Switching  
+🏆 Achievement Unlocks
 
-[![JetBrains logo.](https://resources.jetbrains.com/storage/products/company/brand/logos/jetbrains.svg)](https://jb.gg/OpenSourceSupport)
+</div>
 
-Thanks to JetBrains for providing OSS development license for their IDEs.
+---
 
-Browser testing via
+# 🛠️ Tech Stack
 
-[![TestMu AI](www/public/assets/testmu-logo-black.svg)](https://www.testmuai.com/?utm_medium=sponsor&utm_source=recharts)
+```yaml
+Frontend:
+  - React
+  - Vite
 
+Language:
+  - JavaScript
 
-## License
+Styling:
+  - CSS3
 
-[MIT](http://opensource.org/licenses/MIT)
+Version Control:
+  - Git
+  - GitHub
+```
 
-Copyright (c) 2015-2024 Recharts Group.
+---
+
+# 🚀 Installation
+
+```bash
+git clone https://github.com/your-username/gamified-study-timer.git
+
+cd gamified-study-timer
+
+npm install
+
+npm run dev
+```
+
+---
+
+# 🌱 Planned Features
+
+### 🎯 Productivity
+
+- Daily Goals
+- Weekly Analytics
+- Session History
+- Focus Insights
+
+### 🎮 Gamification
+
+- More Levels
+- More XP Rewards
+- Daily Quests
+- Rare Achievements
+
+### 🎨 Themes
+
+- Pikachu Theme ⚡
+- Eevee Theme 🌟
+- Gengar Theme 👻
+- Snorlax Theme 😴
+
+### ☁️ Future
+
+- Cloud Sync
+- Mobile Version
+- User Profiles
+- Leaderboards
+
+---
+
+# ⚡ Why This Project?
+
+Most study timers only tell you how much time has passed.
+
+This project aims to make studying:
+
+✨ Fun  
+🎮 Interactive  
+🏆 Rewarding  
+📈 Motivating
+
+Every study session contributes toward a bigger goal.
+
+---
+
+<div align="center">
+
+## 💛 Pikachu Inspired Color Palette 💛
+
+🟨 Pikachu Yellow — #FFD93D
+
+🟫 Warm Brown — #8B5E34
+
+⚫ Midnight Black — #1E1E1E
+
+⚪ Soft White — #FFF8E7
+
+⚡ Electric Gold — #FFC300
+
+</div>
+
+---
+
+<div align="center">
+
+<img src="https://readme-typing-svg.demolab.com?font=Poppins&weight=700&size=24&pause=1000&color=FFD93D&center=true&vCenter=true&width=700&lines=Still+Building+Something+Awesome+%F0%9F%9A%A7;More+Features+Coming+Soon+%E2%9A%A1;Stay+Tuned+For+Updates+%F0%9F%8E%AE"/>
+
+### ⭐ If you like this project, consider giving it a star ⭐
+
+### 💛 Built with passion, caffeine, and countless study sessions 💛
+
+</div>
