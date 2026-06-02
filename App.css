@@ -1,0 +1,330 @@
+/* BASE LAYOUT */
+.welcome, .themePage, .dashboard {
+  height: 100vh;
+  background: #0f0f1a;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* GRID */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 200px);
+  gap: 25px;
+  margin-top: 30px;
+}
+
+/* BUTTONS */
+button {
+  padding: 14px 22px;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
+button:hover {
+  transform: scale(1.08);
+}
+
+/* THEME BUTTONS */
+.pokemonBtn {
+  background: linear-gradient(135deg, yellow, black);
+  color: black;
+}
+.shinchanBtn {
+  background: linear-gradient(135deg, red, yellow);
+  color: white;
+}
+.doraemonBtn {
+  background: linear-gradient(135deg, #4fc3ff, white);
+  color: black;
+}
+.oggyBtn {
+  background: linear-gradient(135deg, #00c6ff, black, red);
+  color: white;
+}
+
+/* DASHBOARD */
+.dashboard {
+  position: relative;
+  gap: 25px;
+  text-align: center;
+}
+
+/* TOP BAR */
+.topBar {
+  position: absolute;
+  top: 20px;
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* TIMER */
+.timerBox h1 {
+  font-size: 120px;
+  margin: 0;
+
+  color: #fff700;
+  font-weight: bold;
+
+  text-shadow:
+    0 0 10px yellow,
+    0 0 20px yellow,
+    0 0 40px gold,
+    0 0 80px yellow,
+    0 0 120px gold;
+
+  animation: timerGlow 2s infinite ease-in-out;
+}
+
+/* ⚡ ELECTRIC TIMER BOX */
+.timerBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  padding: 30px;
+  border-radius: 25px;
+
+  background: rgba(0, 0, 0, 0.35);
+
+  border: 3px solid yellow;
+
+  box-shadow:
+    0 0 15px yellow,
+    0 0 30px gold,
+    0 0 50px yellow;
+
+  min-width: 320px;
+
+  position: relative;
+  z-index: 10;
+
+  animation: electricPulse 2s infinite;
+}
+/* CONTROLS */
+.controls {
+  display: flex;
+  gap: 20px;
+}
+
+/* INPUTS */
+.customTimer {
+  display: flex;
+  gap: 10px;
+}
+.customTimer input {
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+}
+
+/* POPUP */
+.popup {
+  position: fixed;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #1a1a2e;
+  padding: 25px;
+  border-radius: 20px;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.popupOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  z-index: 999;
+}
+
+/* THEMES */
+.Pokemon {
+  background: linear-gradient(135deg, #ffd400,black);
+}
+.Shinchan {
+  background: linear-gradient(135deg, red, yellow);
+}
+.Doraemon {
+  background: linear-gradient(135deg, #4fc3ff, white);
+  color: black;
+}
+.Oggy {
+  background: linear-gradient(135deg, #00c6ff, red, black);
+}
+
+/* PIKACHU */
+.pikachu {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  width: 120px;
+  z-index: 9999;
+  pointer-events: none;
+}
+/* ⚡ XP BAR */
+.xpContainer {
+  width: 300px;
+  height: 18px;
+
+  background: rgba(255,255,255,0.15);
+
+  border-radius: 20px;
+
+  overflow: hidden;
+
+  border: 2px solid yellow;
+
+  box-shadow: 0 0 15px yellow;
+}
+
+.xpFill {
+  height: 100%;
+
+  background: linear-gradient(
+    90deg,
+    yellow,
+    gold
+  );
+
+  transition: 0.5s;
+
+  box-shadow:
+    0 0 15px yellow,
+    0 0 30px gold;
+}
+@keyframes electricPulse {
+  0% {
+    box-shadow:
+      0 0 15px yellow,
+      0 0 30px gold;
+  }
+
+  50% {
+    box-shadow:
+      0 0 25px yellow,
+      0 0 50px gold,
+      0 0 80px yellow;
+  }
+
+  100% {
+    box-shadow:
+      0 0 15px yellow,
+      0 0 30px gold;
+  }
+}
+.timerBox {
+  margin-top: 80px;
+
+  padding: 30px;
+
+  border-radius: 25px;
+
+  background: rgba(0, 0, 0, 0.35);
+
+  border: 3px solid yellow;
+
+  box-shadow:
+    0 0 15px yellow,
+    0 0 30px gold,
+    0 0 50px yellow;
+
+  min-width: 320px;
+}
+
+
+.stats {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+@keyframes timerGlow {
+  0% {
+    text-shadow:
+      0 0 10px yellow,
+      0 0 20px gold,
+      0 0 40px yellow;
+  }
+
+  50% {
+    text-shadow:
+      0 0 20px yellow,
+      0 0 40px gold,
+      0 0 80px yellow,
+      0 0 120px gold;
+  }
+
+  100% {
+    text-shadow:
+      0 0 10px yellow,
+      0 0 20px gold,
+      0 0 40px yellow;
+  }
+}
+/* 🌊 PIPLUP THEME */
+.Piplup {
+  background: linear-gradient(
+    135deg,
+    #0d47a1,
+    #42a5f5,
+    #90caf9
+  );
+}
+/* 🌊 PIPLUP TIMER BOX */
+.Piplup .timerBox {
+  border: 3px solid #42a5f5;
+
+  box-shadow:
+    0 0 15px #42a5f5,
+    0 0 30px #64b5f6,
+    0 0 60px #90caf9;
+}
+/* 🌊 PIPLUP TIMER TEXT */
+.Piplup .timerBox h1 {
+  color: #e3f2fd;
+
+  text-shadow:
+    0 0 10px #42a5f5,
+    0 0 30px #64b5f6,
+    0 0 60px #90caf9,
+    0 0 90px #90caf9;
+}
+/* 🌊 PIPLUP XP BAR */
+.Piplup .xpContainer {
+  border: 2px solid #42a5f5;
+
+  box-shadow:
+    0 0 15px #42a5f5,
+    0 0 30px #64b5f6;
+}
+.Piplup .xpFill {
+  background: linear-gradient(
+    90deg,
+    #42a5f5,
+    #90caf9
+  );
+
+  box-shadow:
+    0 0 15px #42a5f5,
+    0 0 30px #64b5f6,
+    0 0 50px #90caf9;
+}
+.Piplup .stats p {
+  color: #e3f2fd;
+
+  text-shadow:
+    0 0 10px #42a5f5,
+    0 0 20px #64b5f6;
+}

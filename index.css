@@ -1,0 +1,44 @@
+body {
+  margin: 0;
+  background: #0f0f1a;
+  color: white;
+  font-family: Arial;
+  text-align: center;
+}
+
+/* POPUP */
+.popup {
+  position: fixed;
+  top: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #1a1a2e;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 0 20px white;
+}
+
+/* GLOW BUTTON */
+.glowBtn {
+  margin: 5px;
+  padding: 10px;
+  border-radius: 15px;
+  border: 2px solid;
+  background: transparent;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.glowBtn:hover {
+  box-shadow: 0 0 20px currentColor;
+  transform: scale(1.1);
+}
+
+/* TIMER */
+body {
+  margin: 0;
+  font-family: Arial;
+}.timer {
+  font-size: 60px;
+}
