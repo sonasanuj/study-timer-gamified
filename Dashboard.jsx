@@ -62,16 +62,18 @@ export default function Dashboard() {
     setXp(newXP);
 
     if (newXP % 100 === 0) {
-  const newLevel = level + 1;
+    const newLevel = level + 1;
 
-  setLevel(newLevel);
+    setLevel(newLevel);
 
-  if (newLevel >= 4) {
-    setPokemonStage("piplup");
+    if (newLevel >= 7) {
+      setPokemonStage("Jigglypuff");
+    } else {
+      setPokemonStage("Piplup");
+    }
+
+    alert("⚡ Level Up!");
   }
-
-  alert("⚡ Level Up!");
-}
     setGraph((prev) => [
       ...prev,
       {
@@ -94,25 +96,24 @@ export default function Dashboard() {
   };
   
   return (
-    <div
-  className={`dashboard ${
-    pokemonStage === "piplup"
-      ? "Piplup"
-      : theme
-  }`}
->
+    <div className={`dashboard ${theme} ${theme === "Pokemon" ? pokemonStage : ""}`}>
       {/* ONLY FOR POKEMON THEME */}
-      {theme === "Pokemon" && (
-  <img
-    src={
-      pokemonStage === "piplup"
-        ? "/images/piplup.gif"
-        : "/images/pikachu.gif"
-    }
-    alt="pokemon"
-    className="pikachu"
-  />
-)}
+      {theme === "Pokemon" && pokemonStage === "Piplup" && (
+        <img
+          src="/images/piplup.gif"
+          alt="piplup"
+          className="pikachu"
+        />
+      )}
+      {/* DAWN IMAGE ONLY FOR PIPLUP LEVELUP */}
+      {theme === "Pokemon" && pokemonStage === "Piplup" && (
+        <img
+          src="/images/dawn.jpg"
+          alt="dawn"
+          className="dawn"
+        />
+      )}
+
       {/* POPUP */}
       {popup && (
         <>
@@ -169,6 +170,8 @@ export default function Dashboard() {
 
         <h2>{theme} Mode</h2>
        
+        {/* Removed duplicate Test Level 7 button (kept only in top bar) */}
+
         <button
           onClick={() =>
             setTime(studyMin * 60)
@@ -180,16 +183,26 @@ export default function Dashboard() {
       </div>
 
       {/* TIMER */}
-      <div className="timerBox">
+      <div className={`timerWrapper ${theme === "Pokemon" && pokemonStage === "Jigglypuff" ? "jigglypuffTimer" : ""}`}>
+        {theme === "Pokemon" && pokemonStage === "Jigglypuff" && (
+          <img
+              src="/images/jigglypuff.jpg"
+              alt="jigglypuff"
+              className="jigglypuffTimerImage"
+            />
+        )}
 
-        <h1>{format(time)}</h1>
+        <div className="timerBox">
 
-        <p>
-          {running
-            ? "🔥 Focus Mode"
-            : "⏸ Paused"}
-        </p>
+          <h1>{format(time)}</h1>
 
+          <p>
+            {running
+              ? "🔥 Focus Mode"
+              : "⏸ Paused"}
+          </p>
+
+        </div>
       </div>
 
       {/* CONTROLS */}
@@ -209,6 +222,18 @@ export default function Dashboard() {
         >
           Pause
         </button>
+
+        {theme === "Pokemon" && (
+          <button
+            onClick={() => {
+              setLevel(7);
+              setXp(600);
+              setPokemonStage("Jigglypuff");
+            }}
+          >
+            Test Level 7
+          </button>
+        )}
 
       </div>
 
