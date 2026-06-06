@@ -53,6 +53,10 @@ button:hover {
   position: relative;
   gap: 25px;
   text-align: center;
+  justify-content: flex-start;
+  padding-top: 100px;
+  overflow-y: auto;
+  padding-bottom: 50px;
 }
 
 /* TOP BAR */
@@ -173,6 +177,25 @@ button:hover {
   z-index: 9999;
   pointer-events: none;
 }
+
+/* DAWN - PIPLUP LEVELUP THEME */
+.dawn {
+  display: none;
+}
+
+.Piplup .dawn {
+  display: block;
+  position: absolute;
+  left: 20px;
+  top: 180px;
+  width: 130px;
+  z-index: 20;
+  pointer-events: none;
+  border-radius: 16px;
+  box-shadow: 0 0 24px rgba(66, 165, 245, 0.65);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  object-fit: cover;
+}
 /* ⚡ XP BAR */
 .xpContainer {
   width: 300px;
@@ -290,6 +313,115 @@ button:hover {
     0 0 15px #42a5f5,
     0 0 30px #64b5f6,
     0 0 60px #90caf9;
+
+  animation: electricPulseBlue 2s infinite;
+}
+
+/* GENGAR POKEMON THEME */
+.Pokemon.Gengar {
+  background: linear-gradient(135deg, #ffbfd6, #ffa3ce, #ff99e0);
+  color: #ffffff;
+}
+
+.Pokemon.Gengar .timerBox {
+  border: 3px solid #ff80bf;
+  background: rgba(255, 192, 203, 0.22);
+  box-shadow:
+    0 0 18px rgba(255, 182, 193, 0.95),
+    0 0 35px rgba(255, 105, 180, 0.65),
+    0 0 55px rgba(255, 105, 180, 0.35);
+  animation: pinkGlow 2s infinite;
+}
+
+.Pokemon.Gengar .timerBox h1 {
+  /* Dark pink glowy numbers for Gengar levelup */
+  color: #ff0f6b;
+  text-shadow:
+    0 0 10px #ff66a1,
+    0 0 30px #ff3b8a,
+    0 0 60px #ff1e6f,
+    0 0 100px rgba(255,30,111,0.6);
+  animation: gengarTimerGlow 2s infinite ease-in-out;
+} 
+
+@keyframes gengarTimerGlow {
+  0% {
+    text-shadow:
+      0 0 8px #ff66a1,
+      0 0 20px #ff3b8a;
+  }
+  50% {
+    text-shadow:
+      0 0 18px #ff66a1,
+      0 0 40px #ff3b8a,
+      0 0 90px #ff1e6f;
+  }
+  100% {
+    text-shadow:
+      0 0 8px #ff66a1,
+      0 0 20px #ff3b8a;
+  }
+} 
+
+.timerWrapper {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  overflow: visible;
+}
+
+.Pokemon.Jigglypuff .jigglypuffTimerImage {
+  position: absolute;
+  left: -180px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 170px;
+  z-index: 15;
+  pointer-events: none;
+}
+
+@keyframes pinkGlow {
+  0% {
+    box-shadow:
+      0 0 15px #ff80bf,
+      0 0 25px #ff84c9;
+  }
+
+  50% {
+    box-shadow:
+      0 0 25px #ff80bf,
+      0 0 45px #ff76c7,
+      0 0 80px #ff9add;
+  }
+
+  100% {
+    box-shadow:
+      0 0 15px #ff80bf,
+      0 0 25px #ff84c9;
+  }
+}
+
+/* �🌊 PIPLUP BLUE PULSE ANIMATION */
+@keyframes electricPulseBlue {
+  0% {
+    box-shadow:
+      0 0 15px #42a5f5,
+      0 0 30px #64b5f6;
+  }
+
+  50% {
+    box-shadow:
+      0 0 25px #42a5f5,
+      0 0 50px #64b5f6,
+      0 0 80px #90caf9;
+  }
+
+  100% {
+    box-shadow:
+      0 0 15px #42a5f5,
+      0 0 30px #64b5f6;
+  }
 }
 /* 🌊 PIPLUP TIMER TEXT */
 .Piplup .timerBox h1 {
@@ -300,6 +432,33 @@ button:hover {
     0 0 30px #64b5f6,
     0 0 60px #90caf9,
     0 0 90px #90caf9;
+
+  animation: timerGlowBlue 2s infinite ease-in-out;
+}
+
+/* 🌊 PIPLUP BLUE GLOW ANIMATION */
+@keyframes timerGlowBlue {
+  0% {
+    text-shadow:
+      0 0 10px #42a5f5,
+      0 0 20px #64b5f6,
+      0 0 40px #90caf9;
+  }
+
+  50% {
+    text-shadow:
+      0 0 20px #42a5f5,
+      0 0 40px #64b5f6,
+      0 0 80px #90caf9,
+      0 0 120px #42a5f5;
+  }
+
+  100% {
+    text-shadow:
+      0 0 10px #42a5f5,
+      0 0 20px #64b5f6,
+      0 0 40px #90caf9;
+  }
 }
 /* 🌊 PIPLUP XP BAR */
 .Piplup .xpContainer {
