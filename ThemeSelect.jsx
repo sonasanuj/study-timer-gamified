@@ -41,12 +41,12 @@ onMouseUp={(e) => e.currentTarget.style.transform = "scale(1.08)"} >
   </button>
 
   <button
-    className="oggyBtn"
-    onClick={() => selectTheme("Oggy")}
+    className="spidermanBtn"
+    onClick={() => selectTheme("Spiderman")}
     onMouseDown={(e) => e.currentTarget.style.transform = "scale(0.9)"}
 onMouseUp={(e) => e.currentTarget.style.transform = "scale(1.08)"}
   >
-    🪳 Oggy
+    🕸️ Spider-Man
   </button>
 
 </div>
