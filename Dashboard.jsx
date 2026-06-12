@@ -18,6 +18,7 @@ export default function Dashboard() {
   const [level, setLevel] = useState(1);
   const [pokemonStage, setPokemonStage] = useState("piplup");
   const [graph, setGraph] = useState([]);
+  const isSpidermanLevelup = theme === "Spiderman" && level >= 4;
 
   // Load selected theme
   useEffect(() => {
@@ -96,7 +97,7 @@ export default function Dashboard() {
   };
   
   return (
-    <div className={`dashboard ${theme} ${theme === "Pokemon" ? pokemonStage : ""}`}>
+    <div className={`dashboard ${theme} ${theme === "Pokemon" ? pokemonStage : ""} ${isSpidermanLevelup ? "SpidermanLevelup" : ""}`}>
       {/* ONLY FOR POKEMON THEME */}
       {theme === "Pokemon" && pokemonStage === "Piplup" && (
         <img
@@ -170,7 +171,28 @@ export default function Dashboard() {
 
         <h2>{theme} Mode</h2>
        
-        {/* Removed duplicate Test Level 7 button (kept only in top bar) */}
+        {theme === "Pokemon" && (
+          <button
+            onClick={() => {
+              setLevel(7);
+              setXp(600);
+              setPokemonStage("Jigglypuff");
+            }}
+          >
+            Test Level 7
+          </button>
+        )}
+
+        {theme === "Spiderman" && (
+          <button
+            onClick={() => {
+              setLevel(4);
+              setXp(400);
+            }}
+          >
+            Test Level 4
+          </button>
+        )}
 
         <button
           onClick={() =>
@@ -184,6 +206,13 @@ export default function Dashboard() {
 
       {/* TIMER */}
       <div className={`timerWrapper ${theme === "Pokemon" && pokemonStage === "Jigglypuff" ? "jigglypuffTimer" : ""}`}>
+        {isSpidermanLevelup && (
+          <img
+              src="/images/peter.gif"
+              alt="peter"
+              className="peterImage"
+            />
+        )}
         {theme === "Pokemon" && pokemonStage === "Jigglypuff" && (
           <img
               src="/images/jigglypuff.jpg"
@@ -203,6 +232,14 @@ export default function Dashboard() {
           </p>
 
         </div>
+
+        {theme === "Spiderman" && !isSpidermanLevelup && (
+          <img
+              src="/images/mask.gif"
+              alt="spiderman mask"
+              className="spidermanMaskImage"
+            />
+        )}
       </div>
 
       {/* CONTROLS */}
@@ -223,17 +260,6 @@ export default function Dashboard() {
           Pause
         </button>
 
-        {theme === "Pokemon" && (
-          <button
-            onClick={() => {
-              setLevel(7);
-              setXp(600);
-              setPokemonStage("Jigglypuff");
-            }}
-          >
-            Test Level 7
-          </button>
-        )}
 
       </div>
 
