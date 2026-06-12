@@ -43,8 +43,8 @@ button:hover {
   background: linear-gradient(135deg, #4fc3ff, white);
   color: black;
 }
-.oggyBtn {
-  background: linear-gradient(135deg, #00c6ff, black, red);
+.spidermanBtn {
+  background: linear-gradient(135deg, #e4001b, #0a4cff, #111111);
   color: white;
 }
 
@@ -164,8 +164,112 @@ button:hover {
   background: linear-gradient(135deg, #4fc3ff, white);
   color: black;
 }
-.Oggy {
-  background: linear-gradient(135deg, #00c6ff, red, black);
+.Spiderman {
+  background: url("/images/spiderman.jpg") center center / cover no-repeat;
+}
+
+.SpidermanLevelup {
+  background: url("/images/noway.gif") center center / cover no-repeat;
+}
+
+.Spiderman .timerBox,
+.SpidermanLevelup .timerBox {
+  background: rgba(20, 0, 10, 0.55);
+  border: 3px solid #7a0010;
+  box-shadow:
+    0 0 18px #7a0010,
+    0 0 36px #0a4cff,
+    0 0 60px rgba(122, 0, 16, 0.75);
+  animation: spidermanPulse 2s infinite;
+}
+
+.Spiderman .timerBox h1,
+.SpidermanLevelup .timerBox h1 {
+  color: #ff4b4b;
+  text-shadow:
+    0 0 10px #7a0010,
+    0 0 22px #0a4cff,
+    0 0 44px #7a0010,
+    0 0 80px #0a4cff;
+  animation: spidermanGlow 2s infinite ease-in-out;
+}
+
+.Spiderman .xpContainer,
+.SpidermanLevelup .xpContainer {
+  border: 2px solid #7a0010;
+  box-shadow:
+    0 0 16px #7a0010,
+    0 0 32px #0a4cff;
+}
+
+.Spiderman .xpFill,
+.SpidermanLevelup .xpFill {
+  background: linear-gradient(90deg, #7a0010, #0a4cff);
+  box-shadow:
+    0 0 16px #7a0010,
+    0 0 32px #0a4cff,
+    0 0 52px rgba(122, 0, 16, 0.85);
+}
+
+.SpidermanLevelup .peterImage {
+  position: absolute;
+  left: -180px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 170px;
+  z-index: 15;
+  pointer-events: none;
+}
+
+.SpidermanLevelup .spidermanMaskImage {
+  display: none;
+}
+
+@keyframes spidermanGlow {
+  0% {
+    text-shadow:
+      0 0 10px #7a0010,
+      0 0 22px #0a4cff,
+      0 0 44px #7a0010;
+  }
+
+  50% {
+    text-shadow:
+      0 0 14px #7a0010,
+      0 0 32px #0a4cff,
+      0 0 68px #0a4cff,
+      0 0 96px #7a0010;
+  }
+
+  100% {
+    text-shadow:
+      0 0 10px #7a0010,
+      0 0 22px #0a4cff,
+      0 0 44px #7a0010;
+  }
+}
+
+@keyframes spidermanPulse {
+  0% {
+    box-shadow:
+      0 0 18px #7a0010,
+      0 0 36px #0a4cff,
+      0 0 60px rgba(122, 0, 16, 0.75);
+  }
+
+  50% {
+    box-shadow:
+      0 0 24px #7a0010,
+      0 0 48px #0a4cff,
+      0 0 84px rgba(122, 0, 16, 0.9);
+  }
+
+  100% {
+    box-shadow:
+      0 0 18px #7a0010,
+      0 0 36px #0a4cff,
+      0 0 60px rgba(122, 0, 16, 0.75);
+  }
 }
 
 /* PIKACHU */
@@ -317,13 +421,13 @@ button:hover {
   animation: electricPulseBlue 2s infinite;
 }
 
-/* GENGAR POKEMON THEME */
-.Pokemon.Gengar {
+/* JIGGLYPUFF POKEMON THEME */
+.Pokemon.Jigglypuff {
   background: linear-gradient(135deg, #ffbfd6, #ffa3ce, #ff99e0);
   color: #ffffff;
 }
 
-.Pokemon.Gengar .timerBox {
+.Pokemon.Jigglypuff .timerBox {
   border: 3px solid #ff80bf;
   background: rgba(255, 192, 203, 0.22);
   box-shadow:
@@ -333,18 +437,18 @@ button:hover {
   animation: pinkGlow 2s infinite;
 }
 
-.Pokemon.Gengar .timerBox h1 {
-  /* Dark pink glowy numbers for Gengar levelup */
+.Pokemon.Jigglypuff .timerBox h1 {
+  /* Dark pink glowy numbers for Jigglypuff levelup */
   color: #ff0f6b;
   text-shadow:
     0 0 10px #ff66a1,
     0 0 30px #ff3b8a,
     0 0 60px #ff1e6f,
     0 0 100px rgba(255,30,111,0.6);
-  animation: gengarTimerGlow 2s infinite ease-in-out;
+  animation: jigglyTimerGlow 2s infinite ease-in-out;
 } 
 
-@keyframes gengarTimerGlow {
+@keyframes jigglyTimerGlow {
   0% {
     text-shadow:
       0 0 8px #ff66a1,
@@ -379,6 +483,32 @@ button:hover {
   width: 170px;
   z-index: 15;
   pointer-events: none;
+}
+
+.Spiderman .spidermanMaskImage {
+  position: static;
+  margin-left: 24px;
+  width: 170px;
+  z-index: 15;
+  pointer-events: none;
+}
+
+.Pokemon.Jigglypuff .xpContainer {
+  border: 2px solid #ff4da6;
+  box-shadow:
+    0 0 18px #ff4da6,
+    0 0 36px #ff1e6f;
+}
+.Pokemon.Jigglypuff .xpFill {
+  background: linear-gradient(90deg, #ff1e6f, #ff66a1);
+  box-shadow:
+    0 0 18px #ff4da6,
+    0 0 36px #ff1e6f,
+    0 0 60px #ff66a1;
+}
+.Pokemon.Jigglypuff .stats p {
+  color: #fff0f8;
+  text-shadow: 0 0 8px #ff4da6;
 }
 
 @keyframes pinkGlow {
