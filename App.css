@@ -158,7 +158,7 @@ button:hover {
   background: linear-gradient(135deg, #ffd400,black);
 }
 .Shinchan {
-  background: linear-gradient(135deg, red, yellow);
+  background: url("/images/shinchan.jpg") center center / cover no-repeat;
 }
 .Doraemon {
   background: linear-gradient(135deg, #4fc3ff, white);
@@ -169,11 +169,14 @@ button:hover {
 }
 
 .SpidermanLevelup {
+  background: url("/images/gwen.jpg") center center / cover no-repeat;
+}
+
+.SpidermanLevel4 {
   background: url("/images/noway.gif") center center / cover no-repeat;
 }
 
-.Spiderman .timerBox,
-.SpidermanLevelup .timerBox {
+.Spiderman .timerBox {
   background: rgba(20, 0, 10, 0.55);
   border: 3px solid #7a0010;
   box-shadow:
@@ -183,8 +186,17 @@ button:hover {
   animation: spidermanPulse 2s infinite;
 }
 
-.Spiderman .timerBox h1,
-.SpidermanLevelup .timerBox h1 {
+.SpidermanLevelup .timerBox {
+  background: rgba(18, 0, 24, 0.6);
+  border: 3px solid #ff4da6;
+  box-shadow:
+    0 0 18px #ff4da6,
+    0 0 36px #4fc3ff,
+    0 0 60px rgba(79, 195, 255, 0.75);
+  animation: spidermanPulse 2s infinite;
+}
+
+.Spiderman .timerBox h1 {
   color: #ff4b4b;
   text-shadow:
     0 0 10px #7a0010,
@@ -194,16 +206,31 @@ button:hover {
   animation: spidermanGlow 2s infinite ease-in-out;
 }
 
-.Spiderman .xpContainer,
-.SpidermanLevelup .xpContainer {
+.SpidermanLevelup .timerBox h1 {
+  color: #ffd1ea;
+  text-shadow:
+    0 0 10px #ff4da6,
+    0 0 22px #4fc3ff,
+    0 0 44px #ff4da6,
+    0 0 80px #4fc3ff;
+  animation: spidermanGlow 2s infinite ease-in-out;
+}
+
+.Spiderman .xpContainer {
   border: 2px solid #7a0010;
   box-shadow:
     0 0 16px #7a0010,
     0 0 32px #0a4cff;
 }
 
-.Spiderman .xpFill,
-.SpidermanLevelup .xpFill {
+.SpidermanLevelup .xpContainer {
+  border: 2px solid #ff4da6;
+  box-shadow:
+    0 0 16px #ff4da6,
+    0 0 32px #4fc3ff;
+}
+
+.Spiderman .xpFill {
   background: linear-gradient(90deg, #7a0010, #0a4cff);
   box-shadow:
     0 0 16px #7a0010,
@@ -211,7 +238,15 @@ button:hover {
     0 0 52px rgba(122, 0, 16, 0.85);
 }
 
-.SpidermanLevelup .peterImage {
+.SpidermanLevelup .xpFill {
+  background: linear-gradient(90deg, #ff4da6, #4fc3ff);
+  box-shadow:
+    0 0 16px #ff4da6,
+    0 0 32px #4fc3ff,
+    0 0 52px rgba(255, 77, 166, 0.85);
+}
+
+.SpidermanLevelup .gwenImage {
   position: absolute;
   left: -180px;
   top: 50%;
@@ -219,10 +254,40 @@ button:hover {
   width: 170px;
   z-index: 15;
   pointer-events: none;
+  border-radius: 18px;
+  border: 3px solid #ff4da6;
+  box-shadow:
+    0 0 14px #ff4da6,
+    0 0 28px #4fc3ff,
+    0 0 48px rgba(255, 77, 166, 0.8);
+}
+
+.SpidermanLevel4 .peterLevel4Image {
+  position: absolute;
+  left: -180px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 170px;
+  z-index: 15;
+  pointer-events: none;
+  border-radius: 18px;
+}
+
+.SpidermanLevel4 .spidermanMaskImage {
+  display: none;
 }
 
 .SpidermanLevelup .spidermanMaskImage {
   display: none;
+}
+
+.SpidermanLevelup .gwenGraph .recharts-cartesian-axis-tick-value {
+  fill: #ffd1ea;
+}
+
+.SpidermanLevelup .gwenGraph .recharts-cartesian-axis-line,
+.SpidermanLevelup .gwenGraph .recharts-cartesian-grid line {
+  stroke: #4fc3ff;
 }
 
 @keyframes spidermanGlow {
